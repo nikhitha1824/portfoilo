@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nikhitha Illa | AI & Web Development Student</title>
+
+  <style>
+    :root {
+      --primary: #004f90;
+      --primary-light: #e6f0fa;
+      --bg: #f5f7fb;
+      --text-main: #222;
+      --text-muted: #555;
+      --card-bg: #ffffff;
+      --border-radius: 12px;
+      --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Layout */
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 16px 40px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #004f90, #0070c9);
+      color: #fff;
+      padding: 24px 20px;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+      margin: 0 -16px 24px;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .title-block h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .title-block p {
+      font-size: 15px;
+      opacity: 0.9;
+    }
+
+    .contact-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      font-size: 14px;
+    }
+
+    .contact-line span {
+      font-weight: 600;
+      margin-right: 4px;
+    }
+
+    .tagline {
+      margin-top: 10px;
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+    /* Sections */
+    section {
+      margin-top: 22px;
+    }
+
+    section h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .section-subtitle {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* Education */
+    .edu-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+      font-size: 15px;
+    }
+
+    .edu-main span {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .edu-extra {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Lists */
+    ul {
+      margin-top: 6px;
+      padding-left: 18px;
+      font-size: 14px;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    /* Grid layouts */
+    .skills-grid,
+    .two-column {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 10px;
+    }
+
+    .skill-pill {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      margin: 4px 4px 0 0;
+      white-space: nowrap;
+    }
+
+    /* Projects */
+    .project-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .project-title {
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .project-link a {
+      font-size: 13px;
+      word-break: break-all;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 24px;
+      padding-top: 12px;
+      border-top: 1px solid #dde3f0;
+    }
+
+    @media (max-width: 640px) {
+      header {
+        border-radius: 0 0 16px 16px;
+      }
+      .title-block h1 {
+        font-size: 24px;
+      }
+      .header-inner {
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="title-block">
+        <h1>Nikhitha Illa</h1>
+        <p>AI & Web Development Student</p>
+        <p class="tagline">B.Tech in Artificial Intelligence • Passionate about learning, building and growing in software development</p>
+      </div>
+      <div class="contact-block">
+        <div class="contact-line">
+          <span>Location:</span> Amalapuram, Andhra Pradesh
+        </div>
+        <div class="contact-line">
+          <span>Email:</span>
+          <a href="mailto:nikhithailla245@gmail.com" style="color:#fff; text-decoration:underline;">
+            nikhithailla245@gmail.com
+          </a>
+        </div>
+        <div class="contact-line">
+          <span>Phone:</span>
+          <a href="tel:+918143683235" style="color:#fff; text-decoration:underline;">
+            +91-8143683235
+          </a>
+        </div>
+        <div class="contact-line">
+          <span>LinkedIn:</span>
+          <a href="https://linkedin.com/in/nikhitha-illa-b80a52293" target="_blank" rel="noopener noreferrer" style="color:#fff; text-decoration:underline;">
+            linkedin.com/in/nikhitha-illa-b80a52293
+          </a>
+        </div>
+        <div class="contact-line">
+          <span>GitHub:</span>
+          <a href="https://github.com/nikhitha1824" target="_blank" rel="noopener noreferrer" style="color:#fff; text-decoration:underline;">
+            github.com/nikhitha1824
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <!-- Profile Summary -->
+    <section>
+      <h2>Profile Summary</h2>
+      <div class="card">
+        <p>
+          Beginner AI and web development student with hands-on academic project experience in Python, Java, and modern web technologies. 
+          Built projects such as a GATE rank predictor platform, fake news detection web app, and an AI-powered KYC verification system 
+          using React and Flask. Highly motivated to grow technical skills, contribute to development teams, and gain real-world 
+          software industry experience.
+        </p>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <h2>Education</h2>
+      <div class="card">
+        <div class="edu-main">
+          <div>
+            <strong>Pragati Engineering College</strong><br />
+            B.Tech in Artificial Intelligence
+          </div>
+          <span>Sept 2023 – June 2027</span>
+        </div>
+        <div class="edu-extra">
+          CGPA: <strong>8.85</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2>Projects</h2>
+
+      <div class="card">
+        <div class="project-title-row">
+          <div class="project-title">Tripease</div>
+        </div>
+        <ul>
+          <li>Developed a travel planning web application to organize trips and itineraries.</li>
+          <li>Implemented responsive UI using HTML, CSS, and JavaScript for a better user experience across devices.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="project-title-row">
+          <div class="project-title">Fake News Detection Web App</div>
+        </div>
+        <ul>
+          <li>Built a Python-based machine learning application to classify news articles as real or fake.</li>
+          <li>Used basic NLP preprocessing and TF-IDF vectorization for text feature extraction.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="project-title-row">
+          <div class="project-title">GATE Rank Predictor Platform</div>
+        </div>
+        <ul>
+          <li>Developed a Django-based web tool to estimate GATE ranks using past cutoff datasets.</li>
+          <li>Designed simple dashboards to visualize score trends and possible admission chances.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="project-title-row">
+          <div class="project-title">AI-Powered Identity Verification and Fraud Detection (KYC)</div>
+          <div class="project-link">
+            <a href="https://github.com/nikhitha1824/AI-Powered_Identity_Verification_and_Fraud_Detection_for_KYC_Compliance"
+               target="_blank" rel="noopener noreferrer">
+              View on GitHub
+            </a>
+          </div>
+        </div>
+        <ul>
+          <li>Implemented an AI-based KYC verification pipeline using OCR and CNN models for document validation.</li>
+          <li>Built and deployed a full-stack application using React for the frontend and Flask for the backend.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2>Skills</h2>
+      <div class="card">
+        <div class="two-column">
+          <div>
+            <strong>Programming Languages</strong><br />
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">HTML</span>
+            <span class="skill-pill">CSS</span>
+            <span class="skill-pill">JavaScript</span>
+          </div>
+          <div>
+            <strong>Tools & Platforms</strong><br />
+            <span class="skill-pill">Git</span>
+            <span class="skill-pill">GitHub</span>
+            <span class="skill-pill">VS Code</span>
+            <span class="skill-pill">AWS (Basics)</span>
+          </div>
+        </div>
+
+        <div style="margin-top:12px;">
+          <strong>Soft & Leadership Skills</strong><br />
+          <span class="skill-pill">Team collaboration</span>
+          <span class="skill-pill">Communication</span>
+          <span class="skill-pill">Problem solving</span>
+          <span class="skill-pill">Project coordination</span>
+          <span class="skill-pill">Presentation skills</span>
+          <span class="skill-pill">Time management</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Internships & Training -->
+    <section>
+      <h2>Internships & Training</h2>
+
+      <div class="card">
+        <strong>AI/ML Virtual Internship</strong>
+        <ul>
+          <li>Completed structured learning in machine learning fundamentals using Python.</li>
+          <li>Practiced data preprocessing and basic supervised model evaluation.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>Android Development Virtual Internship</strong>
+        <ul>
+          <li>Built introductory Android applications using Java and Android Studio.</li>
+          <li>Designed basic UI layouts and navigation using activities and intents.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>Data Engineering Virtual Internship</strong>
+        <ul>
+          <li>Learned ETL fundamentals including data ingestion, cleaning, and transformation.</li>
+          <li>Gained exposure to cloud-based data processing workflows.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>Full Stack Web Developer Virtual Internship</strong>
+        <ul>
+          <li>Developed simple full-stack web applications using front-end and back-end technologies.</li>
+          <li>Practiced REST API integration and version control with Git.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>Infosys Springboard Internship</strong>
+        <ul>
+          <li>Completed certified training in artificial intelligence and applied software development.</li>
+          <li>Participated in guided project activities involving coding, testing, and documentation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section>
+      <h2>Certifications</h2>
+      <div class="card">
+        <ul>
+          <li>Oracle Cloud Infrastructure – Generative AI Professional</li>
+          <li>Google Project Management – Coursera</li>
+          <li>GenAI Data Analytics – Tata iQ (Forage)</li>
+          <li>Joy of Computing with Python – NPTEL</li>
+          <li>Microsoft AI Azure Fundamentals</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section>
+      <h2>Achievements</h2>
+      <div class="card">
+        <ul>
+          <li>Recognized by Google Developer Groups for active technical engagement.</li>
+          <li>Participated in TechNova Symposium conducted by NIT Andhra Pradesh.</li>
+          <li>Selected in Round 1 of <strong>TCS CodeVita Season 13</strong>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 · Nikhitha Illa · Portfolio Website
+    </footer>
+  </main>
+</body>
+</html>
+
